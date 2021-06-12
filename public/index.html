@@ -105,7 +105,7 @@
     <p class="text-xs text-gray-500 text-center mt-3">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim molestiae nulla.
       <br>  <br>
-      <button class="text-white py-2 px-4 focus:outline-none rounded-full transition duration-500 ease-in-out bg-red-400  hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110">
+      <button class="text-white py-2 px-4 focus:outline-none rounded-full transition duration-500 ease-in-out bg-red-400 hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110">
         View
       </button>
     </p>
@@ -267,7 +267,7 @@
           <!-- Call to action button -->
           <div class="w-full lg:w-1/5 mt-6 lg:mt-0 lg:px-4 text-center md:text-left">
              <br>  <br>
-            <button class="text-white py-2 px-4 rounded-full transition duration-500 ease-in-out bg-red-400 focus:outline-none hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110">
+            <button class="text-white text-xs py-2 px-4 rounded-full transition duration-500 ease-in-out bg-red-400 focus:outline-none hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110">
               View
             </button>
           </div>
@@ -314,7 +314,7 @@
          <!-- Call to action button -->
          <div class="w-full lg:w-1/5 mt-6 lg:mt-0 lg:px-4 text-center md:text-left">
             <br>  <br>
-           <button class="text-white py-2 px-4 rounded-full transition duration-500 ease-in-out bg-red-400 focus:outline-none hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110">
+           <button class="text-white text-xs py-2 px-4 rounded-full transition duration-500 ease-in-out bg-red-400 focus:outline-none hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110">
              View
            </button>
          </div>
@@ -430,20 +430,31 @@
 <br>
 <hr class="p-2" width="100%" style="border-top: 3px double #F87171;">
 
-                
-  <div class="grid grid-cols-3 gap-6 w-full relative bg-white-100 h-auto font-serif">
-  <div>COOKBOOK.IO</div>
-  <div>Browse recipe</div>
-  <div>Subscribe to Cookbook.io - </div>
-  <div>Explore the foodie in you.</div>
-  <div>Submit Recipe</div>
-  <div>      <input class="shadow appearance-none border rounded w-52 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="text" placeholder="Email">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 pl-8 pr-8 ">
+
+  <div class="flex flex-col items-center justify-center bg-white p-4 rounded-lg w-auto text-center">
+  <div class="p-2">COOKBOOK.IO</div>
+  <div class="p-2">Explore the foodie in you.</div>
+  <div class="p-2">Cook || Eat || Repeat</div>
   </div>
-  <div>Cook || Eat || Repeat</div>
-  <div>Latest Recipe</div>
-  <div><button class=" text-xs text-white py-2 px-4 focus:outline-none rounded-full transition duration-500 ease-in-out bg-red-400  hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110">
+ 
+  <div class="flex flex-col items-center justify-center bg-white p-4 rounded-lg w-auto text-center">
+ 
+  <div class="p-2">Browse recipe</div>
+  <div class="p-2">Submit Recipe</div>
+  <div class="p-2">Latest Recipe</div>
+  </div>
+  
+  <div class="flex flex-col items-center justify-center bg-white p-4 rounded-lg w-auto text-center">
+    <div class="p-2">Subscribe to Cookbook.io - </div>
+  <div class="p-2">      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="text" placeholder="Email">
+  </div>
+  
+  
+  <div class="p-2"><button class=" text-xs text-white py-2 px-4 focus:outline-none rounded-full transition duration-500 ease-in-out bg-red-400  hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110">
     Submit
   </button></div>
+  </div>
 </div>
 
 

@@ -31833,6 +31833,7 @@ video {
 
 body , html {
   background-color: rgb(255, 255, 255);
+  width: 100%;
 }
 
 .fas ,.far {
@@ -31872,87 +31873,26 @@ body , html {
   color: #F87171;  /*Set to match the Tailwind colour you want the active one to be */
 }
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+.responsive {
+  margin: 0 auto;
+  padding: 10px;
+  width: 90%;
 }
 
-.slider{
-  max-width: 1100px;
-  display: flex;
+.slick-prev {
+  margin-left: -2px;
+  color: #F87171 !important;
 }
 
-.slider .card{
-  flex: 1;
-  margin: 0 10px;
-  background: #fff;
+.slick-prev:before,
+.slick-next:before {
+  color:#F87171 !important;
+  font-size: 40px;
 }
 
-.slider .card .img{
-  height: 200px;
-  width: 100%;
-}
-
-.slider .card .img img{
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.slider .card .content{
-  padding: 10px 20px;
-}
-
-.card .content .title{
-  font-size: 25px;
-  font-weight: 600;
-}
-
-.card .content .sub-title{
-  font-size: 20px;
-  font-weight: 600;
-  color: #e74c3c;
-  line-height: 20px;
-}
-
-.card .content p{
-  text-align: justify;
-  margin: 10px 0;
-}
-
-.card .content .btn{
-  display: block;
-  text-align: left;
-  margin: 10px 0;
-}
-
-.card .content .btn button{
-  background: #e74c3c;
-  color: #fff;
-  border: none;
-  outline: none;
-  font-size: 17px;
-  padding: 5px 8px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.card .content .btn button:hover{
-  transform: scale(0.9);
-}
-
-.checkbox:checked {
-  border: none;
-}
-
-.checkbox:checked + .check-icon {
-  display: flex;
+.slick-next {
+  margin-right: -2px;
+  color: #F87171 !important;
 }
 
 @media (min-width: 640px) {
