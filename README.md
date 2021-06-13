@@ -3,9 +3,13 @@
 
 
 Tech stack used :
-HTML
-CSS
-Tailwind 
-Javascript
-jQuery
-Slick Sliders
+
+-> HTML
+
+-> CSS
+
+-> Tailwind 
+
+-> JavaScript
+
+
