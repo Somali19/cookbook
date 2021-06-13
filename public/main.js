@@ -2,9 +2,10 @@
 $('.responsive').slick({
   infinite: false,
   speed: 300,
-  slidesToShow: 4,
+  slidesToShow: 3,
   slidesToScroll: 2,
- 
+  autoplay: true,
+  autoplaySpeed: 2000,
     
   responsive: [
     {
