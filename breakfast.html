@@ -1,0 +1,387 @@
+<!doctype html>
+<html>
+<head>
+  <!-- ... -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+ 
+   <link rel="stylesheet" href="style.css">
+  <title>cookbook.io</title>
+</head>
+<body>
+    
+<!-- Navbar -->
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<div class="w-full bg-white" style="color: #F87171;">
+  <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+    <div class="p-4 flex flex-row items-center justify-between">
+      <a href="index.html" class="text-lg font-semibold tracking-widest text-red-900 font-medium uppercase rounded-lg scale-95 transform hover:scale-105 dark-mode:text-white focus:outline-none focus:shadow-outline animate__animated animate__bounceIn" style="color: #F87171;">Cookbook.io</a>
+      <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+          <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+          <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+    <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-center md:flex-row">
+      <a class="text-base px-4 py-2 mt-2 font-medium uppercase scale-95 transform hover:scale-105" href="index.html">Home</a>
+      <a class="text-base px-4 py-2 mt-2 uppercase font-medium  scale-95 transform hover:scale-105 act" href="recipe.html">Recipe</a>
+      <a class="text-base px-4 py-2 mt-2 uppercase font-medium  scale-95 transform hover:scale-105 " href="blog.html">Blog</a>
+         
+    </nav>
+    <div class="flex">
+      <i class="fa fa-heart text-red-400 scale-75 transform hover:scale-110 hover:text-red-600 ml-4 mt-4 cursor-pointer justify-end text-3xl" id="myBtn12"></i>
+      <i class="fas fa-book-medical text-red-400 scale-75 transform hover:scale-110 hover:text-red-600 ml-4 mt-4 cursor-pointer justify-end text-3xl" id="myBtn13"></i>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<!--End of navbar -->
+    
+    <div class="container mx-auto gap-4 w-full relative font-serif grid grid-rows-1 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 pl-8 pr-8 animate__animated animate__zoomIn">
+
+      <div class="flex flex-col items-center justify-center bg-white p-4 rounded-lg w-auto text-center">
+        <div class="p-2"><a href="recipe.html"><button class=" text-xs text-white py-2 px-4 focus:outline-none rounded-full transition duration-500 ease-in-out bg-red-400  hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110">
+            Popular Recipes </button></a></div>
+          <div class="p-2"><a href="breakfast.html"><button class=" text-base text-white py-2 px-4 focus:outline-none rounded-full transition duration-500 ease-in-out bg-red-400  hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110 animate-pulse">
+            Breakfast
+          </button></a> </div>
+          <div class="p-2"><a href="lunch.html"><button class=" text-xs text-white py-2 px-4 focus:outline-none rounded-full transition duration-500 ease-in-out bg-red-400  hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110">
+            Lunch
+          </button></a></div>
+          <div class="p-2"><a href="dinner.html"><button class=" text-xs text-white py-2 px-4 focus:outline-none rounded-full transition duration-500 ease-in-out bg-red-400  hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110">
+            Dinner
+          </button></a></div>
+          <div class="p-2"><a href="juice.html"><button class=" text-xs text-white py-2 px-4 focus:outline-none rounded-full transition duration-500 ease-in-out bg-red-400  hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110">
+            Juice
+          </button></a></div>
+          <div class="p-2"><a href="cookies.html"><button class=" text-xs text-white py-2 px-4 focus:outline-none rounded-full transition duration-500 ease-in-out bg-red-400  hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110">
+            Cookies
+          </button></a></div>
+  </div>
+  
+
+  <div class="flex flex-col items-center justify-center bg-white p-4 rounded-lg w-auto text-center">
+    <div class="max-w-sm rounded overflow-hidden shadow-md items-center" style="margin-left: auto; margin-right: auto;">
+      <img class="w-full h-auto pt-6 pr-12 pl-12" src="https://cdn.pixabay.com/photo/2016/11/21/15/53/berries-1846085_960_720.jpg">
+      <div class="px-4 py-2">
+        <div class="font-bold text-xl mb-2 text-center">Black Berries</div>
+        <p class="text-gray-700 text-center text-xs">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> <br> 
+          <button class="text-white py-2 px-4 focus:outline-none rounded-full transition duration-500 ease-in-out bg-red-400  hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110">
+            View
+          </button> </p>
+      </div>
+      <div class="px-6 pt-4 pb-2 text-center">
+       <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#vegfood</span>
+     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#pizza</span>
+     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#food</span>
+      </div>
+    </div>
+    
+   
+</div>
+
+<div class="flex flex-col items-center justify-center bg-white p-4 rounded-lg w-auto text-center">
+  <div class="max-w-sm rounded overflow-hidden shadow-md items-center" style="margin-left: auto; margin-right: auto;">
+    <img class="w-full h-auto pt-6 pr-12 pl-12" src="https://cdn.pixabay.com/photo/2016/02/19/10/29/breakfast-1209260_960_720.jpg">
+    <div class="px-4 py-2">
+      <div class="font-bold text-xl mb-2 text-center">Grains and Berry</div>
+      <p class="text-gray-700 text-center text-xs">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> <br> 
+        <button class="text-white py-2 px-4 focus:outline-none rounded-full transition duration-500 ease-in-out bg-red-400  hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110">
+          View
+        </button> </p>
+    </div>
+    <div class="px-6 pt-4 pb-2 text-center">
+     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#friedchicken</span>
+   <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#fried</span>
+   <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#food</span>
+    </div>
+  </div>
+  
+ 
+</div>
+
+<div class="flex flex-col items-center justify-center bg-white p-4 rounded-lg w-auto text-center">
+  <div class="max-w-sm rounded overflow-hidden shadow-md items-center" style="margin-left: auto; margin-right: auto;">
+    <img class="w-full h-auto pt-6 pr-12 pl-12" src="https://cdn.pixabay.com/photo/2014/12/11/02/55/cereals-563796_960_720.jpg">
+    <div class="px-4 py-2">
+      <div class="font-bold text-xl mb-2 text-center">Cereals</div>
+      <p class="text-gray-700 text-center text-xs">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> <br> 
+        <button class="text-white py-2 px-4 focus:outline-none rounded-full transition duration-500 ease-in-out bg-red-400  hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110">
+          View
+        </button> </p>
+    </div>
+    <div class="px-6 pt-4 pb-2 text-center">
+     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#friedchicken</span>
+   <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#fried</span>
+   <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#food</span>
+    </div>
+  </div>
+  
+ 
+</div>
+<div class="flex flex-col items-center justify-center bg-white p-4 rounded-lg w-auto text-center">
+  <div class="max-w-sm rounded overflow-hidden shadow-md items-center" style="margin-left: auto; margin-right: auto;">
+    <img class="w-full h-auto pt-6 pr-12 pl-12" src="https://cdn.pixabay.com/photo/2016/06/07/17/15/yogurt-1442034_960_720.jpg">
+    <div class="px-4 py-2">
+      <div class="font-bold text-xl mb-2 text-center">Yogurt and Stawberries</div>
+      <p class="text-gray-700 text-center text-xs">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> <br> 
+        <button class="text-white py-2 px-4 focus:outline-none rounded-full transition duration-500 ease-in-out bg-red-400  hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110">
+          View
+        </button> </p>
+    </div>
+    <div class="px-6 pt-4 pb-2 text-center">
+     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#friedchicken</span>
+   <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#fried</span>
+   <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#food</span>
+    </div>
+  </div>
+  
+ 
+</div>
+<div class="flex flex-col items-center justify-center bg-white p-4 rounded-lg w-auto text-center">
+  <div class="max-w-sm rounded overflow-hidden shadow-md items-center" style="margin-left: auto; margin-right: auto;">
+    <img class="w-full h-auto pt-6 pr-12 pl-12" src="https://cdn.pixabay.com/photo/2018/10/06/11/22/coffee-3727673_960_720.jpg">
+    <div class="px-4 py-2">
+      <div class="font-bold text-xl mb-2 text-center">Cappuccino</div>
+      <p class="text-gray-700 text-center text-xs">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> <br> 
+        <button class="text-white py-2 px-4 focus:outline-none rounded-full transition duration-500 ease-in-out bg-red-400  hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110">
+          View
+        </button> </p>
+    </div>
+    <div class="px-6 pt-4 pb-2 text-center">
+     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#friedchicken</span>
+   <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#fried</span>
+   <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#food</span>
+    </div>
+  </div>
+  
+ 
+</div>
+<div class="flex flex-col items-center justify-center bg-white p-4 rounded-lg w-auto text-center">
+  <div class="max-w-sm rounded overflow-hidden shadow-md items-center" style="margin-left: auto; margin-right: auto;">
+    <img class="w-full h-auto pt-6 pr-12 pl-12" src="https://cdn.pixabay.com/photo/2016/06/08/19/46/cereal-1444495_960_720.jpg">
+    <div class="px-4 py-2">
+      <div class="font-bold text-xl mb-2 text-center">Cereal Milk</div>
+      <p class="text-gray-700 text-center text-xs">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> <br> 
+        <button class="text-white py-2 px-4 focus:outline-none rounded-full transition duration-500 ease-in-out bg-red-400  hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110">
+          View
+        </button> </p>
+    </div>
+    <div class="px-6 pt-4 pb-2 text-center">
+     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#friedchicken</span>
+   <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#fried</span>
+   <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#food</span>
+    </div>
+  </div>
+  
+ 
+</div>
+<div class="flex flex-col items-center justify-center bg-white p-4 rounded-lg w-auto text-center">
+  <div class="max-w-sm rounded overflow-hidden shadow-md items-center" style="margin-left: auto; margin-right: auto;">
+    <img class="w-full h-auto pt-6 pr-12 pl-12" src="https://cdn.pixabay.com/photo/2016/11/18/19/00/bread-1836411_960_720.jpg">
+    <div class="px-4 py-2">
+      <div class="font-bold text-xl mb-2 text-center">Bread Egg</div>
+      <p class="text-gray-700 text-center text-xs">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> <br> 
+        <button class="text-white py-2 px-4 focus:outline-none rounded-full transition duration-500 ease-in-out bg-red-400  hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110">
+          View
+        </button> </p>
+    </div>
+    <div class="px-6 pt-4 pb-2 text-center">
+     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#friedchicken</span>
+   <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#fried</span>
+   <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#food</span>
+    </div>
+  </div>
+  
+ 
+</div>
+
+
+    </div>
+
+<hr class="container mx-auto p-2" width="100%" style="border-top: 3px double #F87171;">
+
+                
+
+    <div class="container mx-auto gap-6 w-full relative font-serif grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 pl-8 pr-8 ">
+
+      <div class="flex flex-col items-center justify-center bg-white p-4 rounded-lg w-auto text-center">
+        <div class="p-2">COOKBOOK.IO</div>
+        <div class="p-2">Explore the foodie in you.</div>
+        <div class="p-2">Cook || Eat || Repeat</div>
+  </div>
+  <div class="flex flex-col items-center justify-center bg-white p-4 rounded-lg w-auto text-center">
+ 
+    <div class="p-2">Browse recipe</div>
+    <div class="p-2">Submit Recipe</div>
+    <div class="p-2">Latest Recipe</div>
+    </div>
+    
+    <div class="flex flex-col items-center justify-center bg-white p-4 rounded-lg w-auto text-center">
+      <div class="p-2">Subscribe to Cookbook.io - </div>
+    <div class="p-2">      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="text" placeholder="Email">
+    </div>
+    
+    
+    <div class="p-2"><button class=" text-xs text-white py-2 px-4 focus:outline-none rounded-full transition duration-500 ease-in-out bg-red-400  hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110" id="myBtn11">
+      Submit
+    </button></div>
+    </div>
+
+</div>
+
+<br>
+<hr class="container mx-auto p-2" width="100%" style="border-top: 3px double #F87171;">
+<!-- The Modal -->
+<div id="myModal1" class="modal animate__animated animate__zoomIn">
+
+  <!-- Modal content -->
+  <div class="modal-content ">
+    <span class="close1 scale-75 transform hover:scale-110">&times;</span>
+    <br> <br>
+    <div class="flex justify-center">
+      <div class="p-2"><i class="fas fa-check-circle text-red-400 scale-105 transform hover:scale-110 hover:text-red-600 text-2xl animate-ping"></i>
+      </div>
+     
+      <div class="p-2 animate-pulse"> Submitted</div>
+    
+    
+    </div>
+    <br> <br>
+  
+  </div>
+
+</div>
+
+<!-- The Modal -->
+<div id="myModal2" class="modal animate__animated animate__zoomIn">
+
+  <!-- Modal content -->
+  <div class="modal-content ">
+    <span class="close2 scale-75 transform hover:scale-110">&times;</span>
+    <br> <br>
+    <div class="flex justify-center">
+      <div class="p-2"><img src="https://data.whicdn.com/images/325675474/original.gif" style="width: 50px;">
+      </div>
+     
+      <div class="p-2 animate-pulse"> Favourite List</div>
+    
+    
+    </div>
+    <br> <br>
+  
+  </div>
+
+</div>
+
+
+
+<!-- The Modal -->
+<div id="myModal3" class="modal animate__animated animate__zoomIn">
+
+  <!-- Modal content -->
+  <div class="modal-content ">
+    <span class="close3 scale-75 transform hover:scale-110">&times;</span>
+    <br> <br>
+    <div class="flex justify-center">
+      <div class="p-2"><i class="fas fa-book-medical text-red-400 scale-105 transform hover:scale-110 hover:text-red-600 text-2xl animate-ping"></i>
+      </div>
+     
+      <div class="p-2 animate-pulse"> Recipe Viewed History</div>
+    
+    
+    </div>
+    <br> <br>
+  
+  </div>
+
+</div>
+<script>
+  // Get the modal
+  var modal11 = document.getElementById("myModal1");
+  
+  // Get the button that opens the modal
+  var btn11 = document.getElementById("myBtn11");
+  // Get the <span> element that closes the modal
+  var span11 = document.getElementsByClassName("close1")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn11.onclick = function() {
+    modal11.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span11.onclick = function() {
+    modal11.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal11) {
+      modal11.style.display = "none";
+    }
+  }
+  // Get the modal
+var modal12 = document.getElementById("myModal2");
+
+// Get the button that opens the modal
+var btn12 = document.getElementById("myBtn12");
+// Get the <span> element that closes the modal
+var span12 = document.getElementsByClassName("close2")[0];
+
+// When the user clicks the button, open the modal 
+btn12.onclick = function() {
+  modal12.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span12.onclick = function() {
+  modal12.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal12) {
+    modal12.style.display = "none";
+  }
+}
+
+// Get the modal
+var modal13 = document.getElementById("myModal3");
+
+// Get the button that opens the modal
+var btn13 = document.getElementById("myBtn13");
+// Get the <span> element that closes the modal
+var span13 = document.getElementsByClassName("close3")[0];
+
+// When the user clicks the button, open the modal 
+btn13.onclick = function() {
+  modal13.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span13.onclick = function() {
+  modal13.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal13) {
+    modal13.style.display = "none";
+  }
+}
+  </script>
+        </body>
+        </html>    
